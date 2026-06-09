@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# Enterprise API Handling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project demonstrates enterprise-level API handling concepts using React and TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The application includes:
 
-## React Compiler
+* Centralized API architecture
+* JWT token handling
+* Global error handling
+* Notification system
+* Error boundaries
+* Loading states
+* Empty states
+* Authentication workflow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Enterprise API Handling
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Centralized API service layer
+* Request and response handling
+* Automatic JWT token management
+* Session expiration handling
+* Reusable API utilities
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Notifications
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* Success notifications
+* Error notifications
+* Warning notifications
+* Global notification provider
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Error Management
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Error Boundary implementation
+* Global API error handling
+* Unauthorized access handling
+* Session expiration workflow
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### UI Components
+
+* Loading Skeleton
+* Empty State Component
+* Dashboard Page
+* Login Page
+* Session Expired Page
+
+---
+
+## Screenshots
+
+### Login Page
+
+![Login](./screenshots/login-page.png)
+
+### Dashboard
+
+![Dashboard](./screenshots/dashboard.png)
+
+### Users Loaded
+
+![Users](./screenshots/users-loaded.png)
+
+### 401 Unauthorized
+
+![401](./screenshots/error-401.png)
+
+### 403 Forbidden
+
+![403](./screenshots/error-403.png)
+
+### 500 Server Error
+
+![500](./screenshots/error-500.png)
+
+---
+
+## Technologies Used
+
+* React
+* TypeScript
+* Vite
+* React Router DOM
+* React Toastify
+
+---
+
+## Author
+
+Shragvi Thopte
